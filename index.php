@@ -34,10 +34,8 @@ for($i=0; $i<$word_size; $i++){
 
 	$g="";
 	if(isset($guessed_char)){
-		if(in_array($word_chars[$i], $guessed_char)){
+		if(in_array($word_chars[$i], $guessed_char))
 			$g=$word_chars[$i];
-		}else{
-		}
 	}
 	echo "<input type='text' value='$g' size='1' name='$i'  maxlength='1' class='guessed' readonly />";
 }
@@ -51,12 +49,12 @@ $tastatura = range('A', 'Z');
 foreach($tastatura as $char){
 $dbl = "";
 	if(isset($_POST['guess_it'])){
-		if(in_array($char, $guessed_char)){
+		if(in_array($char, $guessed_char))
 			$dbl="disabled";
-		}else{
+		else
 			$dbl="";
-		}
-	}
+}
+
 	if($rezultat== -1 || $rezultat== 1) $dbl="disabled";
 	echo "<span><form  action='#' method='post'>
 				<input type='hidden' value='$char' name='guess'  />
@@ -69,7 +67,7 @@ if(isset($_POST['restart'])){
 	echo "<meta http-equiv='refresh' content='0'>";
 }
 ?>
-<br /><br />
+<br /><br/>
 	<form action="#" method="post">
 		<input type="submit" value=" Nova Reč " name="restart" class="btn btn-primary btn-lg" />
 	</form>
