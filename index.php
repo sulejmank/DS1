@@ -75,5 +75,5 @@ if(isset($_POST['restart'])){
 	</form>
 </div>
 
-	</body>
+</body>
 </html>
