@@ -1,0 +1,76 @@
+body {
+	width:40%;
+	margin:auto;
+	border:1px dotted gray;
+	padding:7px;
+	padding-bottom:15px;
+}
+
+.guessed,  .buttkey
+{
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 0 0 2px 2px #EAEAEA;
+	-webkit-box-shadow: 0 0 2px 2px #EAEAEA;
+	box-shadow: 0 0 2px 2px #EAEAEA;
+	size:15px;
+	border:1px solid gray;
+	size:15px;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+
+.vesanje {
+	border:1px solid #E3E3E3;
+	margin:auto;
+	margin-right:10px;
+	margin-left:10px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+
+.input_area {
+	border:1px solid;
+	background-color: lightgrey;
+	margin:auto;
+	padding:3px;
+	margin-bottom:5px;
+	margin-right:10px;
+	margin-left:10px;
+	text-align:center;
+	border-radius: 3px;
+}
+
+
+.guessed {
+	text-align:center;
+	width:25px;
+	margin:3px;
+}
+
+.buttkey {
+	width:40px;
+	margin-bottom:3px;
+}
+.buttkey:disabled {
+	background-color: darkgrey;
+	-moz-box-shadow: 0 0 0px 0px darkgrey;
+	-webkit-box-shadow: 0 0 2px 2px darkgrey;
+	box-shadow: 0 0 0px 0px darkgrey;
+}
+
+
+.tastatura {
+	border:1px solid #E3E3E3;
+	width:75%;
+	margin:auto;
+	padding:7px;
+	text-align:center;
+	border-radius: 3px;
+}
+
+form {
+	display:inline;
+}
