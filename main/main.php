@@ -2,19 +2,20 @@
 
 $recnik = explode(" ", file_get_contents("reci.txt"));
 
- $max_pokusaj = 7;
+$max_pokusaj = 7;
 
- $velicina_recnika = count($recnik);
+$velicina_recnika = count($recnik);
 
 if(!isset($_SESSION['rec_id'])) {
+
 	$random_id = rand(0, $velicina_recnika-2);
 	$_SESSION['rec_id'] = 	$random_id ;
 	$_SESSION['brPogresnihPokusaja']= 0;
 	$_SESSION['user_guesses']= array();
 
-} else {
-	$random_id = $_SESSION['rec_id'];
-}
+} else
+	 $random_id = $_SESSION['rec_id'];
+
 
 
 $rec = $recnik[$random_id];
@@ -41,15 +42,12 @@ if(isset($_POST['guess_it'])){
 
 
 function vidi_rezultat(){
-
 	global $word_char_unique;
 	global $max_pokusaj;
 
 	$rezultat = array_intersect($_SESSION['user_guesses'], $word_char_unique);
-	if(count($rezultat) == count($word_char_unique)){
-
-			return $rezultat = 1;
-	}
+	if(count($rezultat) == count($word_char_unique))
+		return $rezultat = 1;
 
 	if($_SESSION['brPogresnihPokusaja'] < $max_pokusaj )
 		return $rezultat =0;
