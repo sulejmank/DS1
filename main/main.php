@@ -6,6 +6,7 @@ $max_pokusaj = 7;
 
 $velicina_recnika = count($recnik);
 
+
 if(!isset($_SESSION['rec_id'])) {
 
 	$random_id = rand(0, $velicina_recnika-2);
@@ -42,6 +43,7 @@ if(isset($_POST['guess_it'])){
 
 
 function vidi_rezultat(){
+
 	global $word_char_unique;
 	global $max_pokusaj;
 
